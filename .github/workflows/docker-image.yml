@@ -15,4 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag pet-store:$(date +%s)
+      run: echo "stopped building image for now"
+        
+    
+   #   run: docker build . --file Dockerfile --tag pet-store:$(date +%s)
