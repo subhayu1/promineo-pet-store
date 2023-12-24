@@ -2,10 +2,12 @@ package com.rimal.petstore.entity;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 @Entity
+@Data
 @Table(name = "employee")
 public class Employee {
 
