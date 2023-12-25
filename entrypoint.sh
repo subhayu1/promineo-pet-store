@@ -10,4 +10,4 @@ mysql -h db --user=root --password=password< src/main/resources/create_db_and_us
 
 
 # Start your Java application
-java -jar ./target/pet-store-0.0.1-SNAPSHOT.jar
+java -jar ./target/pet-store-0.0.1-SNAPSHOT.jar --spring.profiles.active=container
