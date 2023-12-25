@@ -5,6 +5,8 @@ use pet_store;
 
 drop user if exists 'pet_store_admin'@'%';
 drop role if exists RW_USERS@'%';
+drop user if exists 'test_pet_store_user'@'%';
+drop user if exists 'pet_store_user'@'%';
 
 create user 'pet_store_admin'@'%' identified by 'store_admin';
 -- Creating the user with the specified password
