@@ -1,7 +1,8 @@
  **Pet Store Project**
 
- 1. Running the app:
-     prerequisites: Have Docker installed and running and have Port 8080 and 3306 open
+ 1. **Running the app**:
+     **prerequisites:**
+      --> Have Docker installed and running and have Port 8080 and 3306 open
 
     **There are two ways to run the app**
       i. Fully containerized app
@@ -20,7 +21,9 @@
       3. Run the app from IDE and it should create the DB Schema 
       4. If you run into issues run the following command from the project root(after the DB container starts) to create the DB schema and users manually.
            `docker exec -i pet-store-db sh -c 'mysql -h db --user=root --password=password' < src/main/resources/create_db_and_users.sql`
-      5. Run `docker-compose -f docker-compose.container.yml down` to shut down the containers and remove it. 
+   **To shut down container(s)**
+
+      --> Run `docker-compose -f docker-compose.container.yml down` to shut down the containers and remove it. 
 
     
 
