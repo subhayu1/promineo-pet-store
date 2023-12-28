@@ -3,6 +3,7 @@ package com.rimal.petstore.model;
 import com.rimal.petstore.entity.Customer;
 import com.rimal.petstore.entity.Employee;
 import com.rimal.petstore.entity.PetStore;
+import jakarta.persistence.ManyToMany;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -19,8 +20,10 @@ public class PetStoreData {
   private String state;
   private String zip;
   private String phone;
-  private Set<PetStoreCustomer> customers;
-  private Set<PetStoreEmployee> employees;
+  @ManyToMany(mappedBy = "petStores")
+  private Set<PetStoreCustomer> customers = new HashSet<>();
+  @ManyToMany(mappedBy = "petStore")
+  private Set<PetStoreEmployee> employees = new HashSet<>();
 
   public PetStoreData(PetStore petStore) {
     this.petStoreId = petStore.getPetStoreId();

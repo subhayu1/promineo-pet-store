@@ -1,6 +1,7 @@
 package com.rimal.petstore.entity;
 
 import jakarta.persistence.*;
+import java.util.HashSet;
 import lombok.Data;
 import java.util.Set;
 import lombok.EqualsAndHashCode;
@@ -29,7 +30,7 @@ public class Customer {
   @ManyToMany(mappedBy = "customers", cascade = CascadeType.PERSIST)
   @EqualsAndHashCode.Exclude
   @ToString.Exclude
-  private Set<PetStore> petStores;
+  private Set<PetStore> petStores = new HashSet<>();
 }
 
 
